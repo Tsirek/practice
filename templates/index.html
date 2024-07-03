@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+    <title>educational-practice</title>
+  </head>
+  <body class="main">
+  <form action="parse" method="get" class="">
+    <div class="module">
+      <h3>Поиск вакасии</h3>
+        <input name="text" placeholder="Искать здесь..." type="search" class="search_form">
+        <input type="submit">
+    </div>
+    <div class="module">
+      <h3>Опыт работы</h3>
+        <div class="filter-item">
+          <input name="experience" value="noExperience" type="radio" class="filter-checkbox">
+          <label class="filter-label">Без опыта</label>
+        </div>
+        <div class="filter-item">
+          <input name="experience" value="between1And3" type="radio" class="filter-checkbox">
+          <label class="filter-label">1-3 года</label>
+        </div>
+        <div class="filter-item">
+          <input name="experience" value="between3And6" type="radio" class="filter-checkbox">
+          <label class="filter-label">3-6 лет</label>
+        </div>
+        <div class="filter-item">
+          <input name="experience" value="moreThan6" type="radio" class="filter-checkbox">
+          <label class="filter-label">Более 6 лет</label>
+        </div>
+    </div>
+    <div class="module">
+      <h3>Формат работы</h3>
+        <div class="filter-item">
+          <input name="schedule" value="fullDay" type="checkbox" class="filter-checkbox">
+          <label class="filter-label">Полный день</label>
+        </div>
+        <div class="filter-item">
+          <input name="schedule" value="remote" type="checkbox" class="filter-checkbox">
+          <label class="filter-label">Удаленная работа</label>
+        </div>
+        <div class="filter-item">
+          <input name="schedule" value="flexible" type="checkbox" class="filter-checkbox">
+          <label class="filter-label">Гибкий график</label>
+        </div>
+        <div class="filter-item">
+          <input name="schedule" value="shift" type="checkbox" class="filter-checkbox">
+          <label class="filter-label">Сменный график</label>
+        </div>
+        <div class="filter-item">
+          <input name="schedule" value="flyInFlyOut" type="checkbox" class="filter-checkbox">
+          <label class="filter-label">Вахтовый метод</label>
+        </div>
+    </div>
+    <div class="module">
+      <h3>Образование</h3>
+        <div class="filter-item">
+          <input name="education" value="not_required_or_not_specified" type="checkbox" class="filter-checkbox">
+          <label class="filter-label">Не требуется или не указано</label>
+        </div>
+        <div class="filter-item">
+          <input name="education" value="higher" type="checkbox" class="filter-checkbox">
+          <label class="filter-label">Высшее</label>
+        </div>
+        <div class="filter-item">
+          <input name="education" value="special_secondary" type="checkbox" class="filter-checkbox">
+          <label class="filter-label">Среднее профессиональное</label>
+        </div>
+    </div>
+    <div class="module">
+      <h3>Зарплата</h3>
+        <input type="number" name="salary" placeholder="Введите сумму" class="search_form">
+    </div>
+    <div class="filter-item">
+      <input name="only_with_salary" value="True" type="checkbox" class="filter-checkbox">
+      <label class="filter-label">Указан доход</label>
+    </div>
+    </form>
+  </body>
+</html>
+
